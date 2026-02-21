@@ -5,15 +5,15 @@ createApp({
     const tokenValue = ref(0.05);
     var modelTokens = ref(100),
       percentage = ref(60),
-      dollarValue = ref(3500);
+      dollarValue = ref(3500),
+      totalValue = ref(0),
+      studioValue = ref(0);
 
     const calcular = () => {
-      return parseUSD(
-        modelTokens.value *
-          tokenValue.value *
-          dollarValue.value *
-          (percentage.value / 100),
-      );
+      totalValue.value =
+        modelTokens.value * tokenValue.value * dollarValue.value;
+      studioValue.value = (totalValue.value * (100 - percentage.value)) / 100;
+      return parseUSD(totalValue.value * (percentage.value / 100));
     };
 
     const parseUSD = (num) => {
@@ -26,6 +26,9 @@ createApp({
       dollarValue,
       percentage,
       calcular,
+      totalValue,
+      studioValue,
+      parseUSD,
     };
   },
 }).mount('#app');
