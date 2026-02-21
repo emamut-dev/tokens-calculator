@@ -63,6 +63,10 @@
         <div class="col">
           <h2 class="text-center">Valor para la modelo</h2>
           <p class="h1 text-center">{{ calcular() }}</p>
+          <p class="text-center">
+            Valor para el estudio: {{ parseUSD(studioValue) }}
+          </p>
+          <p class="text-center">Total producido: {{ parseUSD(totalValue) }}</p>
         </div>
       </div>
     </div>
