@@ -5,3 +5,11 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+.big-text {
+  font-size: 4rem;
+}
+
+.bi {
+  font-size: 0.9em;
+}
