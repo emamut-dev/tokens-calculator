@@ -5,7 +5,7 @@ createApp({
     const tokenValue = ref(0.05);
     var modelTokens = ref(100),
       percentage = ref(60),
-      dollarValue = ref(3500),
+      dollarValue = ref(3600),
       totalValue = ref(0),
       studioValue = ref(0);
 
