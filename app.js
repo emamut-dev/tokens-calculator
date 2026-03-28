@@ -13,8 +13,8 @@ createApp({
     }
   },
   setup() {
-    const tokenValue = ref(0.05);
-    var modelTokens = ref(100),
+    var tokenValue = ref(0.05),
+      modelTokens = ref(100),
       percentage = ref(60),
       dollarValue = ref(3600),
       totalValue = ref(0),
