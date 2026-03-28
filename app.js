@@ -1,6 +1,17 @@
 const { createApp, ref } = Vue;
 
 createApp({
+  async mounted() {
+    try {
+      const response = await fetch(
+        'https://co.dolarapi.com/v1/cotizaciones/usd',
+      );
+      const data = await response.json();
+      this.dollarValue = data.venta;
+    } catch (error) {
+      console.error('Error fetching dollar value:', error);
+    }
+  },
   setup() {
     const tokenValue = ref(0.05);
     var modelTokens = ref(100),
