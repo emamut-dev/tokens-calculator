@@ -139,17 +139,23 @@ const calcular = () => {
           <p class="big-text text-warning fw-bold">{{ calcular() }} <br /></p>
           <p class="small">{{ percentage }}% del total producido</p>
         </div>
-        <div class="text-center border border-secondary rounded-5 p-4 mt-4">
-          <p>
-            <i class="bi bi-building text-warning"></i> Valor para el estudio
-          </p>
-          <p class="h2 fw-bold">{{ parseUSD(studioValue) }}</p>
-        </div>
-        <div class="text-center border border-secondary rounded-5 p-4 mt-4">
-          <p class="text-center">
-            <i class="bi bi-graph-up text-warning"></i> Total producido
-          </p>
-          <p class="h2 fw-bold">{{ parseUSD(totalValue) }}</p>
+        <div class="d-flex flex-row justify-content-between w-100 gap-1">
+          <div
+            class="text-center border border-secondary rounded-5 p-4 mt-4 flex-fill"
+          >
+            <p>
+              <i class="bi bi-building text-warning"></i> Valor para el estudio
+            </p>
+            <p class="h2 fw-bold">{{ parseUSD(studioValue) }}</p>
+          </div>
+          <div
+            class="text-center border border-secondary rounded-5 p-4 mt-4 flex-fill"
+          >
+            <p class="text-center">
+              <i class="bi bi-graph-up text-warning"></i> Total producido
+            </p>
+            <p class="h2 fw-bold">{{ parseUSD(totalValue) }}</p>
+          </div>
         </div>
       </div>
     </div>
